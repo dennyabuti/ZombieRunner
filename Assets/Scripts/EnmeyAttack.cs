@@ -18,4 +18,9 @@ public class EnmeyAttack : MonoBehaviour
 
         playerHealth.TakeDamage(damage);
     }
+
+    public void OnDamageTaken()
+    {
+        // TODO: Be more aggressive 
+    }
 }
