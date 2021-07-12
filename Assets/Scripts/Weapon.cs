@@ -57,6 +57,8 @@ public class Weapon : MonoBehaviour
 
             if (target == null) return;
 
+            Debug.Log("Shoot at: " + hit.transform.name);
+
             target.TakeDamage(damage);
         }
     }
