@@ -10,15 +10,10 @@ public class WeaponZoom : MonoBehaviour
   [SerializeField] float zoomedInFOV = 20f;
   [SerializeField] float zoomOutSensitivity = 2f;
   [SerializeField] float zoomInSensitivity = 0.5f;
+  [SerializeField] RigidbodyFirstPersonController fpsController;
 
   bool zoomedInToggle = false;
-  RigidbodyFirstPersonController fpsController;
-
-  void Start()
-  {
-      fpsController = GetComponent<RigidbodyFirstPersonController>();
-  }
-
+  
   void Update()
   {
       if (Input.GetMouseButtonDown(1))
