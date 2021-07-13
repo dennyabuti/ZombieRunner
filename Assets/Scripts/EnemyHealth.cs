@@ -23,7 +23,6 @@ public class EnemyHealth : MonoBehaviour
     void Die()
     {
         if (isDead) return;
-
         GetComponent<Animator>().SetTrigger("die");
         isDead = true;
     }
