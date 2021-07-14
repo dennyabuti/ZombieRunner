@@ -11,7 +11,6 @@ public class AmmoPickup : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Other game object: " + other.gameObject.tag);
         if (other.gameObject.tag == "Player")
         {
             FindObjectOfType<Ammo>().IncreaseCurrentAmmo(ammoType, ammoAmount);
