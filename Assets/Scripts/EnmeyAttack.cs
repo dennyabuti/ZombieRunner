@@ -17,6 +17,7 @@ public class EnmeyAttack : MonoBehaviour
         if (playerHealth == null) return;
 
         playerHealth.TakeDamage(damage);
+        playerHealth.GetComponent<DisplayDamage>().ShowDamageImpact();
     }
 
     public void OnDamageTaken()
