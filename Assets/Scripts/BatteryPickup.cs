@@ -5,8 +5,8 @@ using UnityEngine;
 public class BatteryPickup : MonoBehaviour
 {
     // Start is called before the first frame update
-    [SerializeField] int restoreAmount = 5;
-    [SerializeField] float restoreAngle = 30f;
+    [SerializeField] int restoreAmount = 1;
+    [SerializeField] float restoreAngle = 90f;
 
 
 
@@ -14,7 +14,7 @@ public class BatteryPickup : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            FlashLightSystem flashLightSystem = GetComponentInChildren<FlashLightSystem>();
+            FlashLightSystem flashLightSystem = other.gameObject.GetComponentInChildren<FlashLightSystem>();
             flashLightSystem.RestoreLightAngle(restoreAngle);
             flashLightSystem.RestoreLightIntensity(restoreAmount);
             Destroy(gameObject);
